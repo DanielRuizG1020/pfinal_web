@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Frontend para Empleados</title>
+</head>
+<body>
+    <h1>API Empleados</h1>
+
+    <!--GET-->
+    <button id="loadEmployeesButton">Mostrar Empleados</button>
+
+    <!-- Lista de empleados -->
+    <ul id="employeeList"></ul>
+
+
+      <!--GET por id-->
+    <h2>Buscar Empleado por ID</h2>
+    <form id="searchEmployeeForm">
+        <label for="searchId">ID del Empleado a Buscar:</label>
+        <input type="text" id="searchId" required>
+        <button type="button" onclick="searchEmployee()">Buscar Empleado</button>
+    </form>
+    <!--POST-->
+    <h2>Crear Nuevo Empleado</h2>
+    <form id="createEmployeeForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required><br>
+
+        <label for="nacionalidad">Nacionalidad:</label>
+        <input type="text" id="nacionalidad" required><br>
+
+        <label for="ciudad">Ciudad:</label>
+        <input type="text" id="ciudad" required><br>
+
+        <label for="casado">Casado:</label>
+        <input type="checkbox" id="casado"><br>
+
+        <label for="discapacidad">Discapacidad:</label>
+        <input type="checkbox" id="discapacidad"><br>
+
+        <button type="button" onclick="createEmployee()">Crear Empleado</button>
+    </form>
+
+    <!--PATCH-->
+    <h2>Actualizar Empleado</h2>
+    <form id="updateEmployeeForm">
+        <label for="updateId">ID del Empleado:</label>
+        <input type="text" id="updateId" required><br>
+
+        <label for="updateNombre">Nuevo Nombre:</label>
+        <input type="text" id="updateNombre"><br>
+
+        <label for="updateEdad">Nueva Edad:</label>
+        <input type="number" id="updateEdad"><br>
+
+        <label for="updateEdad">Nueva Nacionalidad:</label>
+        <input type="text" id="updateNacionalidad"><br>
+       
+        <label for="updateEdad">Nueva Ciudad:</label>
+        <input type="text" id="updateCiudad"><br>
+
+        <label for="casado">Casado:</label>
+        <input type="checkbox" id="updateCasado"><br>
+
+        <label for="discapacidad">Discapacidad:</label>
+        <input type="checkbox" id="updateDiscapacidad"><br>
+
+        <!-- Agrega más campos según sea necesario -->
+
+        <button type="button" onclick="updateEmployee()">Actualizar Empleado</button>
+    </form>
+
+    <!--DELETE-->
+    <h2>Eliminar Empleado</h2>
+    <form id="deleteEmployeeForm">
+        <label for="deleteId">ID del Empleado a Eliminar:</label>
+        <input type="text" id="deleteId" required><br>
+
+        <button type="button" onclick="deleteEmployee()">Eliminar Empleado</button>
+    </form>
+
+</body>
+</html>
